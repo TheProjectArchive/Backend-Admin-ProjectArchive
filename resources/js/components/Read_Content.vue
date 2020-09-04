@@ -34,9 +34,9 @@
               <td style="width:40%">{{content.category}}</td>
               <td style="width:40%">{{content.description}}</td>
               <td style="width:40%">{{content.url_content}}</td>
-              <td style="width:40%"><img :src="'http://127.0.0.1:8000'+ content.cover_image.slice(2,-1)" width="200px" height="200px"></td>
-              <td style="width:40%"><img :src="'http://127.0.0.1:8000'+ content.banner_image.slice(2,-1)" width="200px" height="200px"></td>
-              <td style="width:40%"><button @click="modal=true" class="btn-style"><img @click="getName(index)" :id="index" :src="'http://127.0.0.1:8000' + content.content_image[0]" width="200px" height="200px"></button></td>
+              <td style="width:40%"><img :src="'http://admin.theprojectarchive.com'+ content.cover_image.slice(2,-1)" width="200px" height="200px"></td>
+              <td style="width:40%"><img :src="'http://admin.theprojectarchive.com'+ content.banner_image.slice(2,-1)" width="200px" height="200px"></td>
+              <td style="width:40%"><button @click="modal=true" class="btn-style"><img @click="getName(index)" :id="index" :src="'http://admin.theprojectarchive.com' + content.content_image[0]" width="200px" height="200px"></button></td>
               <td style="width:20%">
                 <router-link class="btn btn-warning" :to="'/detail-content/'+content.id">Update</router-link>
                 <button class="btn btn-danger" v-on:click="deleteData(content.id)">Delete</button>
@@ -48,7 +48,7 @@
     </div>
     <div class="modal-overlay flex-center" v-if="modal">
         <button v-for="content in contents[this.tempId].content_image" :key="content" @click="modal = false " class="btn-margin btn-style" >
-            <img width="200px" height="200px" :src="'http://127.0.0.1:8000'+ content">
+            <img width="200px" height="200px" :src="'http://admin.theprojectarchive.com'+ content">
         </button>
     </div>
   </div>
