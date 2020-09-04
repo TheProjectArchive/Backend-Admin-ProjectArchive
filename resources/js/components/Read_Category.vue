@@ -55,14 +55,14 @@ export default {
   methods: {
     loadData() {
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/category").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/category").then(response => {
         // mengirim data hasil fetch ke varibale array persons
         this.categories = response.data;
       });
     },
     deleteData(id) {
       // delete data
-      axios.delete("http://localhost:8000/api/category/" + id).then(response => {
+      axios.delete("http://admin.theprojectarchive.com/api/category/" + id).then(response => {
         this.loadData();
       });
     }

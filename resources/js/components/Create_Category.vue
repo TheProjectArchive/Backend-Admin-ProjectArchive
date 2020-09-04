@@ -38,7 +38,7 @@ export default {
     addData() {
       // post data ke api menggunakan axios
       axios
-        .post("http://localhost:8000/api/category", {
+        .post("http://admin.theprojectarchive.com/api/category", {
           category: this.form.category,
         })
         .then(response => {

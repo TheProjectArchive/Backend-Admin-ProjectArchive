@@ -137,7 +137,7 @@ export default {
         }
     },
     loadCategory(){
-      axios.get("http://localhost:8000/api/category").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/category").then(response => {
         // mengirim data hasil fetch ke varibale array persons
         this.categories = response.data;
       });
@@ -145,7 +145,7 @@ export default {
     loadData() {
       // load data berdasarkan id
       axios
-        .get("http://localhost:8000/api/content/" + this.$route.params.id)
+        .get("http://admin.theprojectarchive.com/api/content/" + this.$route.params.id)
         .then(response => {
           // post value yang dari response ke form
           this.form.nama_brand = response.data.nama_brand;
@@ -183,7 +183,7 @@ export default {
 
             console.log(this.form);
       axios
-        .post("http://localhost:8000/api/content/" + this.$route.params.id, formData,config)
+        .post("http://admin.theprojectarchive.com/api/content/" + this.$route.params.id, formData,config)
         .then(response => {
           // push router ke read data
           this.$router.push("/content-list");

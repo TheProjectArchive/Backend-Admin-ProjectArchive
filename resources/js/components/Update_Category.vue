@@ -42,7 +42,7 @@ export default {
     loadData() {
       // load data berdasarkan id
       axios
-        .get("http://localhost:8000/api/category/" + this.$route.params.id)
+        .get("http://admin.theprojectarchive.com/api/category/" + this.$route.params.id)
         .then(response => {
           // post value yang dari response ke form
           this.form.category = response.data.category;
@@ -51,7 +51,7 @@ export default {
     updateData() {
       // put data ke api menggunakan axios
       axios
-        .put("http://localhost:8000/api/category/" + this.$route.params.id, {
+        .put("http://admin.theprojectarchive.com/api/category/" + this.$route.params.id, {
           category: this.form.category,
         })
         .then(response => {

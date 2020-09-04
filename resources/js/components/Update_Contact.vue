@@ -74,7 +74,7 @@ export default {
     loadData() {
       // load data berdasarkan id
       axios
-        .get("http://localhost:8000/api/contact/" + this.$route.params.id)
+        .get("http://admin.theprojectarchive.com/api/contact/" + this.$route.params.id)
         .then(response => {
           // post value yang dari response ke form
           this.form.name = response.data.name;
@@ -86,7 +86,7 @@ export default {
     updateData() {
       // put data ke api menggunakan axios
       axios
-        .put("http://localhost:8000/api/contact/" + this.$route.params.id, {
+        .put("http://admin.theprojectarchive.com/api/contact/" + this.$route.params.id, {
           name: this.form.name,
           email: this.form.email,
           phone: this.form.phone,

@@ -76,19 +76,19 @@ export default {
   methods: {
     loadData() {
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/content").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/content").then(response => {
         // mengirim data hasil fetch ke varibale array persons
         this.contents = response.data;
       });
     },
     deleteData(id) {
       // delete data
-      axios.delete("http://localhost:8000/api/content/" + id).then(response => {
+      axios.delete("http://admin.theprojectarchive.com/api/content/" + id).then(response => {
         this.loadData();
       });
     },
     loadWorkItems(){
-      axios.get("http://localhost:8000/api/workitems").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/workitems").then(response => {
         console.log(response.data);
       }
 

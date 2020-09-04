@@ -2063,7 +2063,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // post data ke api menggunakan axios
-      axios.post("http://localhost:8000/api/category", {
+      axios.post("http://admin.theprojectarchive.com/api/category", {
         category: this.form.category
       }).then(function (response) {
         // push router ke read data
@@ -2205,7 +2205,7 @@ __webpack_require__.r(__webpack_exports__);
     loadCategory: function loadCategory() {
       var _this = this;
 
-      axios.get("http://localhost:8000/api/category").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/category").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.categories = response.data;
       });
@@ -2233,7 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
           "content-type": "multipart/form-data"
         }
       };
-      axios.post("http://localhost:8000/api/content", formData, config).then(function (response) {
+      axios.post("http://admin.theprojectarchive.com/api/content", formData, config).then(function (response) {
         // push router ke read data
         _this2.$router.push("/content-list");
       });
@@ -2342,7 +2342,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/aboutdesc").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/aboutdesc").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.aboutDesc = response.data;
       });
@@ -2419,7 +2419,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/category").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/category").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.categories = response.data;
       });
@@ -2428,7 +2428,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // delete data
-      axios["delete"]("http://localhost:8000/api/category/" + id).then(function (response) {
+      axios["delete"]("http://admin.theprojectarchive.com/api/category/" + id).then(function (response) {
         _this2.loadData();
       });
     }
@@ -2507,7 +2507,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/contact").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/contact").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.contacts = response.data;
       });
@@ -2516,7 +2516,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // delete data
-      axios["delete"]("http://localhost:8000/api/contact/" + id).then(function (response) {
+      axios["delete"]("http://admin.theprojectarchive.com/api/contact/" + id).then(function (response) {
         _this2.loadData();
       });
     }
@@ -2612,7 +2612,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/content").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/content").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.contents = response.data;
       });
@@ -2621,12 +2621,12 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // delete data
-      axios["delete"]("http://localhost:8000/api/content/" + id).then(function (response) {
+      axios["delete"]("http://admin.theprojectarchive.com/api/content/" + id).then(function (response) {
         _this2.loadData();
       });
     },
     loadWorkItems: function loadWorkItems() {
-      axios.get("http://localhost:8000/api/workitems").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/workitems").then(function (response) {
         console.log(response.data);
       });
     },
@@ -2690,7 +2690,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // load data berdasarkan id
-      axios.get("http://localhost:8000/api/aboutdesc/" + this.$route.params.id).then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/aboutdesc/" + this.$route.params.id).then(function (response) {
         // post value yang dari response ke form
         _this.form.text = response.data.about_text;
       });
@@ -2699,7 +2699,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // put data ke api menggunakan axios
-      axios.put("http://localhost:8000/api/aboutdesc/" + this.$route.params.id, {
+      axios.put("http://admin.theprojectarchive.com/api/aboutdesc/" + this.$route.params.id, {
         about_text: this.form.text
       }).then(function (response) {
         // push router ke read data
@@ -2764,7 +2764,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // load data berdasarkan id
-      axios.get("http://localhost:8000/api/category/" + this.$route.params.id).then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/category/" + this.$route.params.id).then(function (response) {
         // post value yang dari response ke form
         _this.form.category = response.data.category;
       });
@@ -2773,7 +2773,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // put data ke api menggunakan axios
-      axios.put("http://localhost:8000/api/category/" + this.$route.params.id, {
+      axios.put("http://admin.theprojectarchive.com/api/category/" + this.$route.params.id, {
         category: this.form.category
       }).then(function (response) {
         // push router ke read data
@@ -2870,7 +2870,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // load data berdasarkan id
-      axios.get("http://localhost:8000/api/contact/" + this.$route.params.id).then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/contact/" + this.$route.params.id).then(function (response) {
         // post value yang dari response ke form
         _this.form.name = response.data.name;
         _this.form.email = response.data.email;
@@ -2882,7 +2882,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // put data ke api menggunakan axios
-      axios.put("http://localhost:8000/api/contact/" + this.$route.params.id, {
+      axios.put("http://admin.theprojectarchive.com/api/contact/" + this.$route.params.id, {
         name: this.form.name,
         email: this.form.email,
         phone: this.form.phone,
@@ -3046,7 +3046,7 @@ __webpack_require__.r(__webpack_exports__);
     loadCategory: function loadCategory() {
       var _this = this;
 
-      axios.get("http://localhost:8000/api/category").then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/category").then(function (response) {
         // mengirim data hasil fetch ke varibale array persons
         _this.categories = response.data;
       });
@@ -3055,7 +3055,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // load data berdasarkan id
-      axios.get("http://localhost:8000/api/content/" + this.$route.params.id).then(function (response) {
+      axios.get("http://admin.theprojectarchive.com/api/content/" + this.$route.params.id).then(function (response) {
         // post value yang dari response ke form
         _this2.form.nama_brand = response.data.nama_brand;
         _this2.form.category = response.data.category;
@@ -3091,7 +3091,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       };
       console.log(this.form);
-      axios.post("http://localhost:8000/api/content/" + this.$route.params.id, formData, config).then(function (response) {
+      axios.post("http://admin.theprojectarchive.com/api/content/" + this.$route.params.id, formData, config).then(function (response) {
         // push router ke read data
         _this3.$router.push("/content-list");
       });
@@ -58753,14 +58753,14 @@ var getters = {};
 var actions = {
   getUser: function getUser(_ref) {
     var commit = _ref.commit;
-    axios.get("http://127.0.0.1:8000/api/user/current").then(function (response) {
+    axios.get("http://admin.theprojectarchive.com/api/user/current").then(function (response) {
       commit('setUser', response.data);
     });
   },
   loginUser: function loginUser(_ref2, user) {
     _objectDestructuringEmpty(_ref2);
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://127.0.0.1:8000/api/user/login", {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://admin.theprojectarchive.com/api/user/login", {
       username: user.username,
       password: user.password
     }).then(function (response) {

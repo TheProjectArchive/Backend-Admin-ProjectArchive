@@ -7,7 +7,7 @@ const getters = {};
 const actions = {
     getUser({commit}){
         axios
-        .get("http://127.0.0.1:8000/api/user/current")
+        .get("http://admin.theprojectarchive.com/api/user/current")
         .then(response => {
             commit('setUser', response.data);
         });
@@ -15,7 +15,7 @@ const actions = {
 
     loginUser({}, user) {
         Axios
-        .post("http://127.0.0.1:8000/api/user/login", {
+        .post("http://admin.theprojectarchive.com/api/user/login", {
             username: user.username,
             password: user.password,
         })

@@ -45,7 +45,7 @@ export default {
   methods: {
     loadData() {
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/aboutdesc").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/aboutdesc").then(response => {
         // mengirim data hasil fetch ke varibale array persons
         this.aboutDesc = response.data;
       });

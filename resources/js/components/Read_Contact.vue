@@ -58,14 +58,14 @@ export default {
   methods: {
     loadData() {
       // fetch data dari api menggunakan axios
-      axios.get("http://localhost:8000/api/contact").then(response => {
+      axios.get("http://admin.theprojectarchive.com/api/contact").then(response => {
         // mengirim data hasil fetch ke varibale array persons
         this.contacts = response.data;
       });
     },
     deleteData(id) {
       // delete data
-      axios.delete("http://localhost:8000/api/contact/" + id).then(response => {
+      axios.delete("http://admin.theprojectarchive.com/api/contact/" + id).then(response => {
         this.loadData();
       });
     }

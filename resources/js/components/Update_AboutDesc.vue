@@ -41,7 +41,7 @@ export default {
     loadData() {
       // load data berdasarkan id
       axios
-        .get("http://localhost:8000/api/aboutdesc/" + this.$route.params.id)
+        .get("http://admin.theprojectarchive.com/api/aboutdesc/" + this.$route.params.id)
         .then(response => {
           // post value yang dari response ke form
           this.form.text = response.data.about_text;
@@ -50,7 +50,7 @@ export default {
     updateData() {
       // put data ke api menggunakan axios
       axios
-        .put("http://localhost:8000/api/aboutdesc/" + this.$route.params.id, {
+        .put("http://admin.theprojectarchive.com/api/aboutdesc/" + this.$route.params.id, {
           about_text: this.form.text,
         })
         .then(response => {
