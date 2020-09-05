@@ -26,6 +26,7 @@ import Home from '../components/Home.vue';
 //import file About Desc
 import Read_AboutDesc from '../components/Read_AboutDesc.vue'
 import Update_AboutDesc from '../components/Update_AboutDesc.vue'
+import Testing from '../components/Testing.vue'
 
 
 // membuat router
@@ -89,6 +90,11 @@ const routes = [
         name: 'updateAboutDesc',
         path: '/detail-aboutdesc/:id',
         component: Update_AboutDesc
+    },
+    {
+        name: 'Testing',
+        path: '/testing',
+        component: Testing
     },
 ]
 
