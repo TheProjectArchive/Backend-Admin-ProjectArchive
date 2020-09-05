@@ -25,6 +25,7 @@
               <th scope="col">Cover Image</th>
               <th scope="col">Banner Image</th>
               <th scope="col">Content Image</th>
+              <th scope="col">Content TEST</th>
             </tr>
           </thead>
           <tbody>
