@@ -54,7 +54,7 @@
           </div>
           <div class="m-auto">
               <label>Prev: </label><br>
-              <p>{{prev.cover_image}}</p>
+              <p>{{prev.cover_image.substring(14)}}</p>
           </div>
           <div class="form-group">
               <label>Banner Image</label>
@@ -66,7 +66,7 @@
           </div>
           <div class="m-auto">
               <label>Prev: </label><br>
-              <p>{{prev.banner_image}}</p>
+              <p>{{prev.banner_image.substring(14)}}</p>
           </div>
           <div class="form-group">
               <label>Content Image</label>
