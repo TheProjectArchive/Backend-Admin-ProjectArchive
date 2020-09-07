@@ -38,10 +38,12 @@ class ContentController extends Controller
         $category = $request->category;
         $description = $request->description;
         $url_content = $request->url_content;
+        $pictures = [];
+        $pictures2 ='';
+        $pictures3 = '';
 
         if($request->hasFile('content_image'))
         {
-            $pictures = [];
 
             foreach($request->file('content_image') as $file){
                 # code... 

@@ -31,7 +31,6 @@
               class="form-control"
               placeholder="Input Desc"
               v-model="form.description"
-              required
             ></textarea>
           </div>
           <div class="form-group">
@@ -41,7 +40,6 @@
               class="form-control"
               placeholder="Input Description"
               v-model="form.url_content"
-              required
             >
           </div>
           <div class="form-group">
