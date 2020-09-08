@@ -2164,8 +2164,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2907,8 +2905,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -39636,7 +39632,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { placeholder: "Input Desc", required: "" },
+                attrs: { placeholder: "Input Desc" },
                 domProps: { value: _vm.form.description },
                 on: {
                   input: function($event) {
@@ -39662,11 +39658,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "textfield",
-                  placeholder: "Input Description",
-                  required: ""
-                },
+                attrs: { type: "textfield", placeholder: "Input Description" },
                 domProps: { value: _vm.form.url_content },
                 on: {
                   input: function($event) {
@@ -40938,7 +40930,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { placeholder: "Input Desc", required: "" },
+                attrs: { placeholder: "Input Desc" },
                 domProps: { value: _vm.form.description },
                 on: {
                   input: function($event) {
@@ -40964,11 +40956,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "textfield",
-                  placeholder: "Input Description",
-                  required: ""
-                },
+                attrs: { type: "textfield", placeholder: "Input Description" },
                 domProps: { value: _vm.form.url_content },
                 on: {
                   input: function($event) {
