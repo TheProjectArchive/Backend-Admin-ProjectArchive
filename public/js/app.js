@@ -2590,12 +2590,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       // variable array yang akan menampung hasil fetch dari api
       contents: [],
       modal: false,
+      modal2: false,
       modalImage: '',
       tempId: ''
     };
@@ -7591,7 +7596,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.modal-overlay[data-v-38ad729b]{\n      position: absolute;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      z-index: 98;\n      background-color: rgb(0, 0, 0, 0.9);\n}\n.flex-center[data-v-38ad729b]{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.btn-margin[data-v-38ad729b]{\n  margin-left: 20px;\n}\n.btn-style[data-v-38ad729b]{\n      background: none;\n      color: inherit;\n      border: none;\n      padding: 0;\n      font: inherit;\n      cursor: pointer;\n      outline: inherit;\n}\n", ""]);
+exports.push([module.i, "\n.modal-overlay[data-v-38ad729b]{\n      position: fixed;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      z-index: 98;\n      background-color: rgb(0, 0, 0, 0.9);\n}\n.flex-center[data-v-38ad729b]{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: scroll;\n}\n.btn-margin[data-v-38ad729b]{\n  margin-left: 20px;\n}\n.btn-style[data-v-38ad729b]{\n      background: none;\n      color: inherit;\n      border: none;\n      padding: 0;\n      font: inherit;\n      cursor: pointer;\n      outline: inherit;\n}\n", ""]);
 
 // exports
 
@@ -40266,9 +40271,44 @@ var render = function() {
                   _vm._v(_vm._s(content.category))
                 ]),
                 _vm._v(" "),
-                _c("td", { staticStyle: { width: "40%" } }, [
-                  _vm._v(_vm._s(content.description))
-                ]),
+                _c(
+                  "td",
+                  {
+                    staticStyle: { width: "40%" },
+                    on: {
+                      click: function($event) {
+                        _vm.modal2 = true
+                      }
+                    }
+                  },
+                  [
+                    content.description
+                      ? _c(
+                          "button",
+                          {
+                            staticClass: "btn-style",
+                            attrs: { id: index },
+                            on: {
+                              click: function($event) {
+                                return _vm.getName(index)
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(
+                                !content.description
+                                  ? (content.description = "")
+                                  : content.description.length > 77
+                                  ? content.description.substring(0, 77) + "..."
+                                  : content.description
+                              )
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  ]
+                ),
                 _vm._v(" "),
                 _c("td", { staticStyle: { width: "40%" } }, [
                   _vm._v(_vm._s(content.url_content))
@@ -40394,6 +40434,25 @@ var render = function() {
           }),
           0
         )
+      : _vm.modal2
+      ? _c("div", { staticClass: "modal-overlay flex-center" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn-margin btn-style",
+              on: {
+                click: function($event) {
+                  _vm.modal2 = false
+                }
+              }
+            },
+            [
+              _c("h1", { staticStyle: { color: "white" } }, [
+                _vm._v(_vm._s(_vm.contents[this.tempId].description))
+              ])
+            ]
+          )
+        ])
       : _vm._e()
   ])
 }
@@ -40424,9 +40483,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Banner Image")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Content Image")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Content TEST")])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Content Image")])
       ])
     ])
   }

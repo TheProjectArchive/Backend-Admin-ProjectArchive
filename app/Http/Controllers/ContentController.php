@@ -198,4 +198,10 @@ class ContentController extends Controller
         $content = Content::select('cover_image','category','id')->get();
         return $content;
     }
+
+    public function getWorkItemsByCategory($category){
+        $category = str_replace("-"," ",$category);
+        $content = Content::select('cover_image','category','id')->where('category','=',$category)->get();
+        return $content;
+    }
 }

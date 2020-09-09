@@ -25,7 +25,6 @@
               <th scope="col">Cover Image</th>
               <th scope="col">Banner Image</th>
               <th scope="col">Content Image</th>
-              <th scope="col">Content TEST</th>
             </tr>
           </thead>
           <tbody>
@@ -33,7 +32,7 @@
             <tr v-for="(content,index) in contents" :key="content.id">
               <td style="width:40%">{{content.nama_brand}}</td>
               <td style="width:40%">{{content.category}}</td>
-              <td style="width:40%">{{content.description}}</td>
+              <td style="width:40%" @click="modal2=true"><button class="btn-style" @click="getName(index)" :id="index" v-if="content.description">{{!content.description ? content.description = "" : content.description.length > 77 ? content.description.substring(0,77) + "..." : content.description}}</button></td>
               <td style="width:40%">{{content.url_content}}</td>
               <td style="width:40%"><img :src="'http://admin.theprojectarchive.com'+ content.cover_image.slice(2,-1)" width="200px" height="200px"></td>
               <td style="width:40%"><img :src="'http://admin.theprojectarchive.com'+ content.banner_image.slice(2,-1)" width="200px" height="200px"></td>
@@ -52,6 +51,11 @@
             <img width="200px" height="200px" :src="'http://admin.theprojectarchive.com'+ content">
         </button>
     </div>
+    <div class="modal-overlay flex-center" v-else-if="modal2">
+        <button @click="modal2 = false " class="btn-margin btn-style" >
+            <h1 style="color:white;">{{contents[this.tempId].description}}</h1>
+        </button>
+    </div>
   </div>
 </template>
 
@@ -63,6 +67,7 @@ export default {
       // variable array yang akan menampung hasil fetch dari api
       contents: [],
       modal: false,
+      modal2: false,
       modalImage:'',
       tempId:'',
     };
@@ -104,7 +109,7 @@ export default {
 
 <style lang="css" scoped>
   .modal-overlay{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -116,6 +121,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
   }
   .btn-margin{
     margin-left: 20px;
