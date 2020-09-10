@@ -32,6 +32,7 @@ Route::put('/content/{id}','ContentController@update');
 Route::delete('/content/{id}','ContentController@delete');
 Route::get('/workitems','ContentController@getWorkItems');
 Route::get('/workitemsByCategory/{category}','ContentController@getWorkItemsByCategory');
+Route::get('/filterList','ContentController@getFilterList');
 // menambahkan route untuk Category
 Route::get('/category','CategoriesController@all');
 Route::get('/category/{id}','CategoriesController@show');

@@ -204,4 +204,9 @@ class ContentController extends Controller
         $content = Content::select('cover_image','category','id')->where('category','=',$category)->get();
         return $content;
     }
+
+    public function getFilterList(){
+        $list = Content::select('category')->orderBy('category')->get();
+        return $list;
+    }
 }

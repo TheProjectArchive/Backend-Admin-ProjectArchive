@@ -7596,7 +7596,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.modal-overlay[data-v-38ad729b]{\n      position: fixed;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      z-index: 98;\n      background-color: rgb(0, 0, 0, 0.9);\n}\n.flex-center[data-v-38ad729b]{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: scroll;\n}\n.btn-margin[data-v-38ad729b]{\n  margin-left: 20px;\n}\n.btn-style[data-v-38ad729b]{\n      background: none;\n      color: inherit;\n      border: none;\n      padding: 0;\n      font: inherit;\n      cursor: pointer;\n      outline: inherit;\n}\n", ""]);
+exports.push([module.i, "\n.modal-overlay[data-v-38ad729b]{\n      position: fixed;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      z-index: 98;\n      background-color: rgb(0, 0, 0, 0.9);\n}\n.flex-center[data-v-38ad729b]{\n  overflow: scroll;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.btn-margin[data-v-38ad729b]{\n  margin-left: 20px;\n}\n.btn-style[data-v-38ad729b]{\n      background: none;\n      color: inherit;\n      border: none;\n      padding: 0;\n      font: inherit;\n      cursor: pointer;\n      outline: inherit;\n}\n", ""]);
 
 // exports
 

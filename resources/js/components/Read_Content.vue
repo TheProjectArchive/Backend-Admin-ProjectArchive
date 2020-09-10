@@ -118,10 +118,10 @@ export default {
         background-color: rgb(0, 0, 0, 0.9);
     }
   .flex-center{
+    overflow: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
   }
   .btn-margin{
     margin-left: 20px;
